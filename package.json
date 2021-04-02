@@ -1,0 +1,25 @@
+{
+  "name": "bot_gra_eas",
+  "version": "1.0.0",
+  "description": "Bot Discord do gry na eas",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "dev:watch": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amadeooooo/DiscordBot.git"
+  },
+  "author": "Grupka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Amadeooooo/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/Amadeooooo/DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "nodemon": "^2.0.7"
+  }
+}
