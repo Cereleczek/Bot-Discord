@@ -1,7 +1,9 @@
+const sql = require('mysql')
 const fs = require('fs');
 const config = require("./config/config.js");
 const chalk = require("chalk");
 const Discord = require('discord.js');
+const sqlcon = require('./mySQL/connect');
 //const pingPong = require("./functions/pingPong");
 
 
@@ -41,6 +43,9 @@ const command = args.shift().toLowerCase();
 
 if (!client.commands.has(command)) console.log('no such command');
 try {
+    
+    sqlcon.connecting;
+
     console.log(msg.content + ' ' + msg.author.tag + ' ' + msg.guild.channels.find(
       channel => channel.name.toLowerCase()
     ));    //client.channels pokazuje kanały
@@ -49,54 +54,6 @@ try {
     console.error(error);
     msg.reply('Error');
 }
-
-    
-
-//================================KOMENDY======================================
-
-
-    /*if (msg.content === 'newprefix') {
-
-      //pingPong.ping();
-
-      client.channels.get("827251470453571645").send("pong")
-    }
-
-    if (msg.content === prefix + 'ping') {
-
-        //pingPong.ping();
-
-        client.channels.get("827251470453571645").send("pong")
-      }
-
-    if (msg.author.tag === 'Seven#5030')
-    {
-
-        msg.channel.send("Sram ci do mordy Kacprze");
-
-    }
-    
-    if ((msg.content) && (licznik === 2))
-    {
-
-        //msg.reply("Sram ci do mordy");
-        //msg.channel.send("https://tenor.com/view/pooping-im-shit-shitting-bricks-gif-14455877")
-        licznik = 0;
-        //for(let i = 0; i<=10; i++)msg.channel.send("gówno")
-
-    }
-    else licznik++;
-
-
-    if (msg.content === 'Send to poop dimension')
-    {
-
-      msg.channel.send('https://media.discordapp.net/attachments/534842938560217108/826911206203195432/tenor_1.gif')
-
-    }*/
-
-
-    //================================KONIEC=KOMEND================================
 
 
 });
